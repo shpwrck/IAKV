@@ -3,5 +3,3 @@ helm:
   releaseName: kubevela
   repo: https://kubevelacharts.oss-cn-hangzhou.aliyuncs.com/core
   chart: vela-core
-  values:
-    installCertManager: true 
