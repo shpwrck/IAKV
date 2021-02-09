@@ -1,4 +1,4 @@
-defaultNamespace: kube-vela
+defaultNamespace: vela-system
 helm:
   releaseName: kubevela
   repo: https://kubevelacharts.oss-cn-hangzhou.aliyuncs.com/core
