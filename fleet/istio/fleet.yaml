@@ -1,0 +1,16 @@
+defaultNamespace: istio-system
+helm:
+  releaseName: rancher-istio
+  repo: https://charts.rancher.io
+  chart: rancher-istio
+  values:
+    overlayFile: |
+      apiVersion: install.istio.io/v1alpha1
+      kind: IstioOperator
+      spec:
+        values:
+          sidecarInjectorWebhook:
+            enableNamespacesByDefault: true
+            objectSelector: 
+              enabled: true
+              autoInject: false
