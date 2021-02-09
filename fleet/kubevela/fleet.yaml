@@ -2,6 +2,6 @@ defaultNamespace: kube-vela
 helm:
   releaseName: kubevela
   repo: https://kubevelacharts.oss-cn-hangzhou.aliyuncs.com/core
-  chart: kubevela/vela-core
+  chart: vela-core
   values:
     installCertManager: true 
