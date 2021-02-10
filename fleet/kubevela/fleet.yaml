@@ -95,8 +95,9 @@ diff:
       path: "/webhooks/4/matchPolicy"
     - op: remove
       path: "/webhooks/4/clientConfig/service/port"
-    - op: remove
+    - op: replace
       path: "/webhooks/4/clientConfig/caBundle"
+      value: Cg==
     - op: remove
       path: "/webhooks/4/admissionReviewVersions"
     - op: remove
@@ -113,8 +114,9 @@ diff:
       path: "/webhooks/3/matchPolicy"
     - op: remove
       path: "/webhooks/3/clientConfig/service/port"
-    - op: remove
+    - op: replace
       path: "/webhooks/3/clientConfig/caBundle"
+      value: Cg==
     - op: remove
       path: "/webhooks/3/admissionReviewVersions"
     - op: remove
@@ -127,8 +129,9 @@ diff:
       path: "/webhooks/2/matchPolicy"
     - op: remove
       path: "/webhooks/2/clientConfig/service/port"
-    - op: remove
+    - op: replace
       path: "/webhooks/2/clientConfig/caBundle"
+      value: Cg==
     - op: remove
       path: "/webhooks/1/sideEffects"
     - op: remove
@@ -139,8 +142,9 @@ diff:
       path: "/webhooks/1/matchPolicy"
     - op: remove
       path: "/webhooks/1/clientConfig/service/port"
-    - op: remove
+    - op: replace
       path: "/webhooks/1/clientConfig/caBundle"
+      value: Cg==
     - op: remove
       path: "/webhooks/0/sideEffects"
     - op: remove
@@ -151,6 +155,6 @@ diff:
       path: "/webhooks/0/matchPolicy"
     - op: remove
       path: "/webhooks/0/clientConfig/service/port"
-    - op: remove
+    - op: replace
       path: "/webhooks/0/clientConfig/caBundle"
-
+      value: Cg==
