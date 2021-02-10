@@ -11,14 +11,12 @@ diff:
     kind: MutatingWebhookConfiguration
     name: cert-manager-webhook
     operations: 
-    - {"op":"remove", "path":"/webhooks/0/clientConfig"}
-    - {"op":"remove", "path":"/webhooks/0/rules"}
+    - {"op":"remove", "path":"/webhooks/0"}
   - apiVersion: admissionregistration.k8s.io/v1beta1
     kind: ValidatingWebhookCOnfiguration
     name: cert-manager-webhook
     operations:
-    - {"op":"remove", "path":"/webhooks/0/clientConfig"}
-    - {"op":"remove", "path":"/webhooks/0/rules"}
+    - {"op":"remove", "path":"/webhooks/0"}
   - apiVersion: rbac.authorization.k8s.io/v1 
     kind: RoleBinding
     name: cert-manager-webhook:dynamic-serving
