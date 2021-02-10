@@ -5,7 +5,7 @@ helm:
   chart: vela-core
 diff:
   comparePatches:
-  - apiVersion: admissionregistration.k8s.io/v1beta1
+  - apiVersion: admissionregistration.k8s.io/v1
     kind: MutatingWebhookConfiguration
     name: kubevela-mutating-webhook-configuration
     operations:
@@ -13,7 +13,7 @@ diff:
     - {"op": "remove", "path":"/webhooks/0/rules"}
     - {"op": "remove", "path":"/webhooks/1/clientConfig/caBundle"}
     - {"op": "remove", "path":"/webhooks/1/rules"}
-  - apiVersion: admissionregistration.k8s.io/v1beta1
+  - apiVersion: admissionregistration.k8s.io/v1
     kind: ValidatingWebhookCOnfiguration
     name: kubevela-validating-webhook-configuration
     operations1c:
