@@ -32,11 +32,7 @@ diff:
     - op: remove
       path: "/webhooks/0/rules/0/scope"
     - op: remove
-      path: "/webhooks/0/reinvocationPolicy"
-    - op: remove
       path: "/webhooks/0/objectSelector"
-    - op: remove
-      path: "/webhooks/0/namespaceSelector"
     - op: remove
       path: "/webhooks/0/matchPolicy"
     - op: remove
