@@ -26,7 +26,7 @@ diff:
     - op: remove
       path: "/webhooks/0/clientConfig/caBundle"
   - apiVersion: admissionregistration.k8s.io/v1
-    kind: ValidatingWebhookCOnfiguration
+    kind: ValidatingWebhookConfiguration
     name: cert-manager-webhook
     operations:
     - op: remove
