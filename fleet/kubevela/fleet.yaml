@@ -10,6 +10,78 @@ diff:
     name: kubevela-mutating-webhook-configuration
     operations:
     - op: remove
+      path: "/webhooks/3/timeoutSeconds"
+    - op: remove
+      path: "/webhooks/3/sideEffects"
+    - op: remove
+      path: "/webhooks/3/rules/0/scope"
+    - op: remove
+      path: "/webhooks/3/reinvocationPolicy"
+    - op: remove
+      path: "/webhooks/3/objectSelector"
+    - op: remove
+      path: "/webhooks/3/namespaceSelector"
+    - op: remove
+      path: "/webhooks/3/matchPolicy"
+    - op: remove
+      path: "/webhooks/3/clientConfig/service/port"
+    - op: remove
+      path: "/webhooks/3/clientConfig/caBundle"
+    - op: remove
+      path: "/webhooks/3/admissionReviewVersions"
+    - op: remove
+      path: "/webhooks/2/timeoutSeconds"
+    - op: remove
+      path: "/webhooks/2/sideEffects"
+    - op: remove
+      path: "/webhooks/2/rules/0/scope"
+    - op: remove
+      path: "/webhooks/2/reinvocationPolicy"
+    - op: remove
+      path: "/webhooks/2/objectSelector"
+    - op: remove
+      path: "/webhooks/2/namespaceSelector"
+    - op: remove
+      path: "/webhooks/2/matchPolicy"
+    - op: remove
+      path: "/webhooks/2/clientConfig/service/port"
+    - op: remove
+      path: "/webhooks/2/clientConfig/caBundle"
+    - op: remove
+      path: "/webhooks/2/admissionReviewVersions"
+    - op: remove
+      path: "/webhooks/1/sideEffects"
+    - op: remove
+      path: "/webhooks/1/reinvocationPolicy"
+    - op: remove
+      path: "/webhooks/1/objectSelector"
+    - op: remove
+      path: "/webhooks/1/namespaceSelector"
+    - op: remove
+      path: "/webhooks/1/matchPolicy"
+    - op: remove
+      path: "/webhooks/1/clientConfig/service/port"
+    - op: remove
+      path: "/webhooks/1/clientConfig/caBundle"
+    - op: remove
+      path: "/webhooks/0/sideEffects"
+    - op: remove
+      path: "/webhooks/0/reinvocationPolicy"
+    - op: remove
+      path: "/webhooks/0/objectSelector"
+    - op: remove
+      path: "/webhooks/0/namespaceSelector"
+    - op: remove
+      path: "/webhooks/0/matchPolicy"
+    - op: remove
+      path: "/webhooks/0/clientConfig/service/port"
+    - op: remove
+      path: "/webhooks/0/clientConfig/caBundle"
+  - apiVersion: admissionregistration.k8s.io/v1
+    kind: ValidatingWebhookConfiguration
+    name: kubevela-validating-webhook-configuration
+    operations:
+    - op: remove
       path: "/webhooks/4/timeoutSeconds"
     - op: remove
       path: "/webhooks/4/sideEffects"
@@ -23,9 +95,8 @@ diff:
       path: "/webhooks/4/matchPolicy"
     - op: remove
       path: "/webhooks/4/clientConfig/service/port"
-    - op: replace
+    - op: remove
       path: "/webhooks/4/clientConfig/caBundle"
-      value: Cg==
     - op: remove
       path: "/webhooks/4/admissionReviewVersions"
     - op: remove
@@ -42,9 +113,8 @@ diff:
       path: "/webhooks/3/matchPolicy"
     - op: remove
       path: "/webhooks/3/clientConfig/service/port"
-    - op: replace
+    - op: remove
       path: "/webhooks/3/clientConfig/caBundle"
-      value: Cg==
     - op: remove
       path: "/webhooks/3/admissionReviewVersions"
     - op: remove
@@ -57,9 +127,8 @@ diff:
       path: "/webhooks/2/matchPolicy"
     - op: remove
       path: "/webhooks/2/clientConfig/service/port"
-    - op: replace
+    - op: remove
       path: "/webhooks/2/clientConfig/caBundle"
-      value: Cg==
     - op: remove
       path: "/webhooks/1/sideEffects"
     - op: remove
@@ -70,9 +139,8 @@ diff:
       path: "/webhooks/1/matchPolicy"
     - op: remove
       path: "/webhooks/1/clientConfig/service/port"
-    - op: replace
+    - op: remove
       path: "/webhooks/1/clientConfig/caBundle"
-      value: Cg==
     - op: remove
       path: "/webhooks/0/sideEffects"
     - op: remove
@@ -83,11 +151,6 @@ diff:
       path: "/webhooks/0/matchPolicy"
     - op: remove
       path: "/webhooks/0/clientConfig/service/port"
-    - op: replace
+    - op: remove
       path: "/webhooks/0/clientConfig/caBundle"
-      value: Cg==
-  - apiVersion: admissionregistration.k8s.io/v1
-    kind: ValidatingWebhookConfiguration
-    name: kubevela-validating-webhook-configuration
-    operations:
 
