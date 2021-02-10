@@ -5,3 +5,29 @@ helm:
   chart: cert-manager
   values:
     installCRDs: true
+diff:
+  comparePatches:
+  - apiVersion: admissionregistration.k8s.io/v1beta1
+    kind: MutatingWebhookConfiguration
+    name: rancher-monitoring-admission
+    operations: []
+  - apiVersion: admissionregistration.k8s.io/v1beta1
+    kind:
+    name:
+    operations: []
+  - apiVersion: rbac.authorization.k8s.io/v1 
+    kind:
+    name:
+    operations:
+    - {"op":"remove", "path":"/subjects/0/apiGroup"}
+    - {"op":"remove", "path":"/subjects/0/kind"}
+    - {"op":"remove", "path":"/subjects/0/name"}
+    - {"op":"remove", "path":"/subjects/0/namespace"}
+  - apiVersion: rbac.authorization.k8s.io/v1
+    kind:
+    name:
+    operations:
+    - {"op":"remove", "path":"/subjects/0/apiGroup"}
+    - {"op":"remove", "path":"/subjects/0/kind"}
+    - {"op":"remove", "path":"/subjects/0/name"}
+    - {"op":"remove", "path":"/subjects/0/namespace"}
