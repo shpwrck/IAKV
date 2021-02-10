@@ -9,23 +9,23 @@ diff:
   comparePatches:
   - apiVersion: admissionregistration.k8s.io/v1beta1
     kind: MutatingWebhookConfiguration
-    name: rancher-monitoring-admission
+    name: cert-manager-webhook
     operations: []
   - apiVersion: admissionregistration.k8s.io/v1beta1
-    kind:
-    name:
+    kind: ValidatingWebhookCOnfiguration
+    name: cert-manager-webhook
     operations: []
   - apiVersion: rbac.authorization.k8s.io/v1 
-    kind:
-    name:
+    kind: RoleBinding
+    name: cert-manager-webhook:dynamic-serving
     operations:
     - {"op":"remove", "path":"/subjects/0/apiGroup"}
     - {"op":"remove", "path":"/subjects/0/kind"}
     - {"op":"remove", "path":"/subjects/0/name"}
     - {"op":"remove", "path":"/subjects/0/namespace"}
   - apiVersion: rbac.authorization.k8s.io/v1
-    kind:
-    name:
+    kind: RoleBinding
+    name: cert-manager:leaderelection
     operations:
     - {"op":"remove", "path":"/subjects/0/apiGroup"}
     - {"op":"remove", "path":"/subjects/0/kind"}

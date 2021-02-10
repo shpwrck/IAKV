@@ -3,3 +3,13 @@ helm:
   releaseName: kubevela
   repo: https://kubevelacharts.oss-cn-hangzhou.aliyuncs.com/core
   chart: vela-core
+diff:
+  comparePatches:
+  - apiVersion: admissionregistration.k8s.io/v1beta1
+    kind: MutatingWebhookConfiguration
+    name: kubevela-mutating-webhook-configuration
+    operations: []
+  - apiVersion: admissionregistration.k8s.io/v1beta1
+    kind: ValidatingWebhookCOnfiguration
+    name: kubevela-validating-webhook-configuration
+    operations: []
