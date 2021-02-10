@@ -12,24 +12,26 @@ diff:
     name: cert-manager-webhook
     operations: 
     - {"op":"remove", "path":"/webhooks/0/clientConfig/caBundle"}
+    - {"op":"remove", "path":"/webhooks/0/rules"}
   - apiVersion: admissionregistration.k8s.io/v1beta1
     kind: ValidatingWebhookCOnfiguration
     name: cert-manager-webhook
     operations:
-    - {"op":"replace", "path":"/webhooks/0/clientConfig/caBundle"}
+    - {"op":"remove", "path":"/webhooks/0/clientConfig/caBundle"}
+    - {"op":"remove", "path":"/webhooks/0/rules"}
   - apiVersion: rbac.authorization.k8s.io/v1 
     kind: RoleBinding
     name: cert-manager-webhook:dynamic-serving
     namespace: cert-manager
     operations:
     - {"op":"remove", "path":"/subjects/0/apiGroup"}
-    - {"op":"replace", "path":"/subjects/0/name"}
-    - {"op":"replace", "path":"/subjects/0/namespace"}
+    - {"op":"remove", "path":"/subjects/0/name"}
+    - {"op":"remove", "path":"/subjects/0/namespace"}
   - apiVersion: rbac.authorization.k8s.io/v1
     kind: RoleBinding
     name: cert-manager:leaderelection
     namespace: kube-system 
     operations:
     - {"op":"remove", "path":"/subjects/0/apiGroup"}
-    - {"op":"replace", "path":"/subjects/0/name"}
-    - {"op":"replace", "path":"/subjects/0/namespace"}
+    - {"op":"remove", "path":"/subjects/0/name"}
+    - {"op":"remove", "path":"/subjects/0/namespace"}
