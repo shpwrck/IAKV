@@ -18,6 +18,7 @@ diff:
   - apiVersion: rbac.authorization.k8s.io/v1 
     kind: RoleBinding
     name: cert-manager-webhook:dynamic-serving
+    namespace: cert-manager
     operations:
     - {"op":"remove", "path":"/subjects/0/apiGroup"}
     - {"op":"replace", "path":"/subjects/0/name"}
@@ -27,6 +28,6 @@ diff:
     name: cert-manager:leaderelection
     namespace: kube-system 
     operations:
-    - {"op":"add", "path":"/subjects/0/kind"}
-    - {"op":"add", "path":"/subjects/0/name"}
-    - {"op":"add", "path":"/subjects/0/namespace"}
+    - {"op":"remove", "path":"/subjects/0/apiGroup"}
+    - {"op":"replace", "path":"/subjects/0/name"}
+    - {"op":"replace", "path":"/subjects/0/namespace"}
