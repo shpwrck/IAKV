@@ -16,7 +16,7 @@ diff:
   - apiVersion: admissionregistration.k8s.io/v1beta1
     kind: ValidatingWebhookCOnfiguration
     name: kubevela-validating-webhook-configuration
-    operations:
+    operations1c:
     - {"op": "remove", "path":"/webhooks/0/clientConfig/caBundle"}
     - {"op": "remove", "path":"/webhooks/0/rules"}
     - {"op": "remove", "path":"/webhooks/1/clientConfig/caBundle"}
