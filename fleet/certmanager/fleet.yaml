@@ -10,11 +10,16 @@ diff:
   - apiVersion: admissionregistration.k8s.io/v1beta1
     kind: MutatingWebhookConfiguration
     name: cert-manager-webhook
-    operations: [] 
+    operations: 
+    - {"op":"add", "path":"/webhooks/0/rules/0/scope"}
   - apiVersion: admissionregistration.k8s.io/v1beta1
     kind: ValidatingWebhookCOnfiguration
     name: cert-manager-webhook
-    operations: []
+    operations:
+    - {"op":"", "path":""}
+    - {"op":"", "path":""}
+    - {"op":"", "path":""}
+    - {"op":"", "path":""}
   - apiVersion: rbac.authorization.k8s.io/v1 
     kind: RoleBinding
     name: cert-manager-webhook:dynamic-serving
