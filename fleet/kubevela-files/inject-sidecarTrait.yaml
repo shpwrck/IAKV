@@ -1,0 +1,12 @@
+apiVersion: core.oam.dev/v1alpha2
+kind: TraitDefinition
+metadata:
+  annotations:
+    definition.oam.dev/description: "Inject Istio Sidecar"
+  name: inject-sidecar
+spec:
+  appliesToWorkloads:
+    - "*"
+  extension:
+    template: |-
+      patch: { spec: template: metadata: labels: 'sidecar.istio.io/inject': "true" }
