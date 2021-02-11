@@ -14,3 +14,5 @@ helm:
             objectSelector: 
               enabled: true
               autoInject: false
+              matchLabels:
+                sidecar.istio.io: "inject"

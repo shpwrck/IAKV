@@ -9,4 +9,10 @@ spec:
     - "*"
   extension:
     template: |-
-      patch: { spec: template: metadata: labels: 'sidecar.istio.io/inject': "true" }
+      patch: { 
+          spec: template: { 
+              metadata: labels: { 
+                "sidecar.istio.io": "inject"
+              } 
+          }
+      }
