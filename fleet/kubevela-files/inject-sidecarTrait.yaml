@@ -12,7 +12,7 @@ spec:
       patch: { 
           spec: template: { 
               metadata: labels: { 
-                "sidecar.istio.io": "inject"
+                "sidecar.istio.io/inject": "true"
               } 
           }
       }
