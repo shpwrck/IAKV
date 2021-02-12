@@ -1,0 +1,21 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: iakv
+  namespace: fleet-default
+spec:
+  branch: main
+  forceSyncGeneration: 10
+  insecureSkipTLSVerify: false
+  paths:
+  - /fleet/monitoring-crd
+  - /fleet/monitoring
+  - /fleet/istio
+  - /fleet/kiali-crd
+  - /fleet/kubevela-crds
+  - /fleet/certmanager
+  - /fleet/kubevela
+  paused: false
+  repo: https://github.com/shpwrck/IAKV
+  targets:
+  - clusterSelector: {}
